@@ -37,7 +37,7 @@ const useData = <T>(
 
       return () => controller.abort();
     },
-    deps ? deps : []
+    deps ? [...deps] : []
   );
 
   return { data, error, loading };
